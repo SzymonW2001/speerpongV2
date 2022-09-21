@@ -33,6 +33,7 @@ function alles(){
 
 //////////
 function game(data){
+
     document.querySelector(".gamemodes").style.display="none" 
     let ball = document.getElementById("ball")
     let gameWindow = document.querySelector(".pole")
@@ -40,6 +41,19 @@ function game(data){
     let velocityLeft = 8
     let velocityTop = 8
     let compVelocity = 9
+
+    /////////////////
+    setInterval(() => {
+        if(computerPoints==10 | yourPoints==10){
+            ball.style.left=50+"%"
+            ball.style.top=50+"%"
+            window.cancelAnimationFrame(update)
+            clearInterval(interval1)
+            window.location.reload(true)
+            return false;
+        }
+    }, 1000);
+    /////////////////
     
     if(data==1){
         interval1
@@ -57,17 +71,6 @@ function game(data){
     
         ball.style.left=ballPosition.left + velocityLeft + "px"
         ball.style.top=ballPosition.top + velocityTop + "px"
-    
-        if(computerPoints==10 | yourPoints==10){
-            ball.style.left=50+"%"
-            ball.style.top=50+"%"
-            window.cancelAnimationFrame(update)
-            clearInterval(interval1)
-            window.location.reload(true)
-            return false;
-
-        }
-    
     
         let computer = document.getElementById("computer")
         if(data==1){
@@ -182,5 +185,7 @@ function game(data){
     }
     
     
+
+
     
     
