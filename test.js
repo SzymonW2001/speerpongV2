@@ -7,6 +7,13 @@ let seconds = 0
 let width = window.innerWidth
 console.log(width)
 
+let interval1 = setInterval(() => {
+    seconds+=1
+    secondsTime=seconds%60
+    minutes  = Math.floor(seconds/60)
+    document.querySelector(".time").innerHTML=`${minutes}m ${secondsTime}s`
+}, 1000);
+
 if(width<500){
     document.body.innerHTML='<div class="smallcreen"><h1>ZA MAŁY EKRAN, OBRÓĆ TELEFON I</h1><button onclick="window.location.reload()">ODŚWIEŻ</button></div>'
 }
@@ -35,12 +42,7 @@ function game(data){
     let compVelocity = 9
     
     if(data==1){
-        setInterval(() => {
-            seconds+=1
-            secondsTime=seconds%60
-            minutes  = Math.floor(seconds/60)
-            document.querySelector(".time").innerHTML=`${minutes}m ${secondsTime}s`
-        }, 1000);
+        interval1
     }
     
     function update(time){
@@ -60,8 +62,10 @@ function game(data){
             ball.style.left=50+"%"
             ball.style.top=50+"%"
             window.cancelAnimationFrame(update)
-            location.reload();
+            clearInterval(interval1)
+            window.location.reload(true)
             return false;
+
         }
     
     
@@ -176,5 +180,7 @@ function game(data){
             
             }, false);
     }
+    
+    
     
     
