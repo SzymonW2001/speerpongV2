@@ -1,0 +1,144 @@
+.pole{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    border-radius: 3px solid black;
+}
+.player{
+    background-color: white;
+    position: absolute;
+    width: 1%;
+    height: 20%;
+    border-radius: 3px solid black;
+    right: 98%;
+    top: 50px;
+}
+.computer{
+    background-color: white;
+    width: 1%;
+    position: absolute;
+    height:20%;
+    border-radius: 3px solid black;
+    left: 98%;
+    top: 50px;
+}
+.ball{
+    background-color: white;
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    border-radius: 50%;
+    width: 5vw;
+    border-radius: 3px solid black;
+    height: 5vw;
+}
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+img{
+    border-radius: 50%;
+    width: 5vw;
+    height: 5vw;}
+
+.gamemodes{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    z-index: 100;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    vertical-align:middle;
+    z-index: 50;
+    background-color: black;
+}
+.ubttoncontai{
+    position: relative;
+    left: 0%;
+    top: 2%;
+    vertical-align: middle;
+    width: 50%;
+    height: 50%;
+    z-index: 50;
+    background-color: black;
+}
+button{
+    font-size: larger;
+    width: 100%;
+    height: 10%;
+    z-index: 100;
+    color: white;
+    background-color: black;
+    font-family: 'Inter', sans-serif;
+    font-size: x-large;
+}
+.points{
+    position: absolute;
+    left: 45%;
+    top: 2%;
+    width: 10%;
+    height: 15%;
+    text-align: center;
+    color: white;
+    z-index: 1;
+    font-family: 'Inter', sans-serif;
+    font-size: x-large;
+}
+.title{
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 4vw;
+    padding: 5px;
+}
+br{
+    height: 0%;
+}
+.hide{
+    display: none;
+}
+
+.survival:hover +.hide, .twoPlayers:hover +.hide,.random:hover +.hide{
+    display: block;
+    color: white;
+    padding: 10px;
+    margin: 3px;
+    font-size: larger;
+    
+
+}
+.smallcreen{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    text-align: center;
+    display: block;
+
+}
+h1{
+    color: white;
+    vertical-align: middle;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .ubttoncontai{
+        height: 100vh;
+    }
+    .text,.random,.survival,.twoPlayers,.title{
+        height: 15vh;
+    }
+    .ball, img{
+        width: 7vw;
+        height: 7vw;
+    }
+    .title{
+        font-size: medium;
+    }
+    .time{
+        font-size: small;
+    }
+  }

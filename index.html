@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet"> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <div class="gamemodes">
+        <div class="ubttoncontai">
+            <div class="title">SPEERPONG SPEERPONG</div>
+            <button class="text">WYBIERZ TRYB GRY</button>
+            <button class="random" onclick="game(2)">Normalny</button>
+                <div class="hide">Paletka komputera porusza się po stałym torze, ale jest większa niż twoja, gra kończy się na 10 punktach, twoich lub komputera</div>
+            <button class="survival" onclick="game(1)">Survival</button>
+                <div class="hide">Paletka komputera zawsze nadąża za Speerem, celem jest odbijanie jak najdłużej, gra kończy się na 10 punktach komputera</div>
+            <button class="twoPlayers" onclick="game(3)">Dwóch graczy</button>
+                <div class="hide">Lewą paletką steruje się strzałkami w górę i w dół, prawą paletką klawiszami "w" oraz "s", gra kończy się na 10 punktach. Do gry niezbedny jest kolega, jeśli nie posiadasz takiego spróbuj krzyknąc "NIENAWIDZĘ ANTYCHRYSTA" bardzo głośno- Powinni poawić się sąsiedzi i będziesz miał z kim grać.</div>
+        </div>
+    </div>
+    <div class="pole">
+        <div class="points">
+            <div id="points">0:0</div>
+
+            <p class="time">0m 0s</p>
+        </div>
+        <div class="player" id="player"></div>
+        <div class="computer" id="computer"></div>
+        <div class="ball" id="ball"><img src="./speer.png"></div>
+    </div>
+</body>
+<script  src="./test.js">
+
+</script>
+</html>
